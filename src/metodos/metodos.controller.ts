@@ -3,23 +3,23 @@ import { MetodosService } from './metodos.service';
 import { CreateMetodoDto } from './dto/create-metodo.dto';
 import { UpdateMetodoDto } from './dto/update-metodo.dto';
 
-@Controller('metodos')
+@Controller('metodo')
 export class MetodosController {
   constructor(private readonly metodosService: MetodosService) {}
-
-  @Post()
-  create(@Body() createMetodoDto: CreateMetodoDto) {
-    return this.metodosService.create(createMetodoDto);
-  }
-
-  @Get()
-  findDiff() {
-    return this.metodosService.findDiff();
+  
+  @Get('/distinto/')
+  findDistinct() {
+    return this.metodosService.findDistinct();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.metodosService.findOne(+id);
+  }
+
+  @Post()
+  create(@Body() createMetodoDto: CreateMetodoDto) {
+    return this.metodosService.create(createMetodoDto);
   }
 
   @Patch(':id')

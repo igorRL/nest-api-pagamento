@@ -7,11 +7,6 @@ import { UpdateInstituitionDto } from './dto/update-instituition.dto';
 export class InstituitionsController {
   constructor(private readonly instituitionsService: InstituitionsService) {}
 
-  @Post()
-  create(@Body() createInstituitionDto: CreateInstituitionDto) {
-    return this.instituitionsService.create(createInstituitionDto);
-  }
-
   @Get()
   findAll() {
     return this.instituitionsService.findAll();
@@ -23,8 +18,13 @@ export class InstituitionsController {
   }
 
   @Get('/metodo/:id')
-  findDiffByMethod(@Param('id') id: string) {
-    return this.instituitionsService.findDiffByMethod(+id);
+  findAllByMethod(@Param('id') id: string) {
+    return this.instituitionsService.findAllByMethod(+id);
+  }
+
+  @Post()
+  create(@Body() createInstituitionDto: CreateInstituitionDto) {
+    return this.instituitionsService.create(createInstituitionDto);
   }
   
   @Patch(':id')

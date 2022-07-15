@@ -7,19 +7,19 @@ import { UpdateBancobrasilBoletoDto } from './dto/update-bancobrasil-boleto.dto'
 export class BancobrasilBoletosController {
   constructor(private readonly bancobrasilBoletosService: BancobrasilBoletosService) {}
 
-  @Post()
-  create(@Body() createBancobrasilBoletoDto: CreateBancobrasilBoletoDto) {
-    return this.bancobrasilBoletosService.create(createBancobrasilBoletoDto);
-  }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.bancobrasilBoletosService.findOne(+id);
   }
 
   @Get('/cliente/:id')
-  findAll(@Param('id') id: string) {
-    return this.bancobrasilBoletosService.findAll(+id);
+  findAllByExId(@Param('id') id: string) {
+    return this.bancobrasilBoletosService.findAllByExId(+id);
+  }
+
+  @Post()
+  create(@Body() createBancobrasilBoletoDto: CreateBancobrasilBoletoDto) {
+    return this.bancobrasilBoletosService.create(createBancobrasilBoletoDto);
   }
 
   @Patch(':id')

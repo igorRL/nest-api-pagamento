@@ -16,7 +16,7 @@ export class InstituitionsService {
     return `This action returns a #${id} instituition`;
   }
 
-  findDiffByMethod(id: number){
+  findAllByMethod(id: number){
     return `This action returns diff instituitions has #${id} method id`;
   }
 

@@ -4,16 +4,17 @@ import { UpdateBancobrasilBoletoRegistroDto } from './dto/update-bancobrasil-bol
 
 @Injectable()
 export class BancobrasilBoletoRegistrosService {
-  create(createBancobrasilBoletoRegistroDto: CreateBancobrasilBoletoRegistroDto) {
-    return 'This action adds a new bancobrasilBoletoRegistro';
-  }
-
-  findAll() {
-    return `This action returns all bancobrasilBoletoRegistros`;
-  }
 
   findOne(id: number) {
     return `This action returns a #${id} bancobrasilBoletoRegistro`;
+  }
+
+  findAllByExId(id: number) {
+    return `This action returns all bancobrasilBoletoRegistros by id_ex #${id} filter`;
+  }
+
+  create(createBancobrasilBoletoRegistroDto: CreateBancobrasilBoletoRegistroDto) {
+    return 'This action adds a new bancobrasilBoletoRegistro';
   }
 
   update(id: number, updateBancobrasilBoletoRegistroDto: UpdateBancobrasilBoletoRegistroDto) {

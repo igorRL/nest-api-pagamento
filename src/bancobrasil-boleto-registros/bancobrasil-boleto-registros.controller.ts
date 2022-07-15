@@ -3,23 +3,23 @@ import { BancobrasilBoletoRegistrosService } from './bancobrasil-boleto-registro
 import { CreateBancobrasilBoletoRegistroDto } from './dto/create-bancobrasil-boleto-registro.dto';
 import { UpdateBancobrasilBoletoRegistroDto } from './dto/update-bancobrasil-boleto-registro.dto';
 
-@Controller('bancobrasil-boleto-registros')
+@Controller('bancobrasil-boleto-registro')
 export class BancobrasilBoletoRegistrosController {
   constructor(private readonly bancobrasilBoletoRegistrosService: BancobrasilBoletoRegistrosService) {}
+
+  @Get('/id/:id')
+  findOne(@Param('id') id: string) {
+    return this.bancobrasilBoletoRegistrosService.findOne(+id);
+  }
+
+  @Get(':id')
+  findAllByExId(@Param('id') id: string) {
+    return this.bancobrasilBoletoRegistrosService.findAllByExId(+id);
+  }
 
   @Post()
   create(@Body() createBancobrasilBoletoRegistroDto: CreateBancobrasilBoletoRegistroDto) {
     return this.bancobrasilBoletoRegistrosService.create(createBancobrasilBoletoRegistroDto);
-  }
-
-  @Get()
-  findAll() {
-    return this.bancobrasilBoletoRegistrosService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.bancobrasilBoletoRegistrosService.findOne(+id);
   }
 
   @Patch(':id')

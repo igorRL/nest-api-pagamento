@@ -1,5 +1,14 @@
 # ______________ INSTITUIÇÕES ______________
 
+### Get all
+GET http://localhost:3000/instituicao
+
+### Get by id
+GET http://localhost:3000/instituicao/1
+
+### Get by id
+GET http://localhost:3000/instituicao/metodo/1
+
 ###
 POST http://localhost:3000/instituicao
 Content-type: application/json
@@ -8,15 +17,6 @@ Content-type: application/json
     "name": "sample",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
-
-### Get all
-GET http://localhost:3000/instituicao
-
-### Get by id
-GET http://localhost:3000/instituicao/1
-
-### Get by method
-GET http://localhost:3000/instituicao/metodo/123
 
 ### Put by id
 PATCH http://localhost:3000/instituicao/1
@@ -37,8 +37,14 @@ DELETE  http://localhost:3000/instituicao/1
 
 # ______________ METODOS ______________
 
+### Get all
+GET http://localhost:3000/metodo/distinto
+
+### Get by id
+GET http://localhost:3000/metodo/1
+
 ###
-POST http://localhost:3000/metodos
+POST http://localhost:3000/metodo
 Content-type: application/json
 
 {
@@ -46,14 +52,8 @@ Content-type: application/json
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
 
-### Get all
-GET http://localhost:3000/metodos
-
-### Get by id
-GET http://localhost:3000/metodos/1
-
 ### Put by id
-PATCH http://localhost:3000/metodos/1
+PATCH http://localhost:3000/metodo/1
 Content-type: application/json
 
 {
@@ -62,7 +62,7 @@ Content-type: application/json
 }
 
 ### Delet by id
-DELETE  http://localhost:3000/metodos/1
+DELETE  http://localhost:3000/metodo/1
 
 
 
@@ -104,7 +104,15 @@ DELETE  http://localhost:3000/conta/1
 
 
 
+
+
 # ______________ boletos banco do brasil ______________
+
+### Get all of one user id
+GET http://localhost:3000/bancobrasil-boleto/1
+
+### Get all of one user id
+GET http://localhost:3000/bancobrasil-boleto/cliente/1
 
 ###
 POST http://localhost:3000/bancobrasil-boleto
@@ -114,12 +122,6 @@ Content-type: application/json
     "name": "sample",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
-
-### Get all of one user id
-GET http://localhost:3000/bancobrasil-boleto/cliente/1
-
-### Get all of one user id
-GET http://localhost:3000/bancobrasil-boleto/1
 
 ### Put by id
 PATCH http://localhost:3000/bancobrasil-boleto/1
@@ -134,3 +136,35 @@ Content-type: application/json
 DELETE  http://localhost:3000/bancobrasil-boleto/1
 
 
+
+
+
+
+# ______________ boletos registrados banco do brasil ______________
+
+### Get all of one user id
+GET http://localhost:3000/bancobrasil-boleto-registro/id/1
+
+### Get all of one user id
+GET http://localhost:3000/bancobrasil-boleto-registro/123
+
+###
+POST http://localhost:3000/bancobrasil-boleto-registro
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Put by id
+PATCH http://localhost:3000/bancobrasil-boleto-registro/1
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Delet by id
+DELETE  http://localhost:3000/bancobrasil-boleto-registro/1

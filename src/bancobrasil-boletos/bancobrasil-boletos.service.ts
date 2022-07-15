@@ -4,16 +4,17 @@ import { UpdateBancobrasilBoletoDto } from './dto/update-bancobrasil-boleto.dto'
 
 @Injectable()
 export class BancobrasilBoletosService {
-  create(createBancobrasilBoletoDto: CreateBancobrasilBoletoDto) {
-    return 'This action adds a new bancobrasilBoleto';
-  }
-
-  findAll(id: number) {
-    return `This action returns all bancobrasilBoletos of client id #${id} has.`;
-  }
 
   findOne(id: number) {
     return `This action returns a #${id} bancobrasilBoleto`;
+  }
+
+  findAllByExId(id: number) {
+    return `This action returns all bancobrasilBoletos by client id filter #${id}`;
+  }
+
+  create(createBancobrasilBoletoDto: CreateBancobrasilBoletoDto) {
+    return 'This action adds a new bancobrasilBoleto';
   }
 
   update(id: number, updateBancobrasilBoletoDto: UpdateBancobrasilBoletoDto) {

@@ -4,16 +4,16 @@ import { UpdateMetodoDto } from './dto/update-metodo.dto';
 
 @Injectable()
 export class MetodosService {
-  create(createMetodoDto: CreateMetodoDto) {
-    return 'This action adds a new metodo';
-  }
-
-  findDiff() {
+  findDistinct() {
     return `This action returns all diff metodos`;
   }
 
   findOne(id: number) {
     return `This action returns a #${id} metodo`;
+  }
+
+  create(createMetodoDto: CreateMetodoDto) {
+    return 'This action adds a new metodo';
   }
 
   update(id: number, updateMetodoDto: UpdateMetodoDto) {
