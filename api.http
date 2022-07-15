@@ -1,0 +1,136 @@
+# ______________ INSTITUIÇÕES ______________
+
+###
+POST http://localhost:3000/instituicao
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Get all
+GET http://localhost:3000/instituicao
+
+### Get by id
+GET http://localhost:3000/instituicao/1
+
+### Get by method
+GET http://localhost:3000/instituicao/metodo/123
+
+### Put by id
+PATCH http://localhost:3000/instituicao/1
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Delet by id
+DELETE  http://localhost:3000/instituicao/1
+
+
+
+
+
+
+# ______________ METODOS ______________
+
+###
+POST http://localhost:3000/metodos
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Get all
+GET http://localhost:3000/metodos
+
+### Get by id
+GET http://localhost:3000/metodos/1
+
+### Put by id
+PATCH http://localhost:3000/metodos/1
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Delet by id
+DELETE  http://localhost:3000/metodos/1
+
+
+
+
+
+
+# ______________ CONTA ______________
+
+###
+POST http://localhost:3000/conta
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Get all of one user id
+GET http://localhost:3000/conta/id/1
+
+### Get all of one user id
+GET http://localhost:3000/conta/1
+
+### Get by id
+GET http://localhost:3000/conta/1/123
+
+### Put by id
+PATCH http://localhost:3000/conta/1
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Delet by id
+DELETE  http://localhost:3000/conta/1
+
+
+
+
+# ______________ boletos banco do brasil ______________
+
+###
+POST http://localhost:3000/bancobrasil-boleto
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Get all of one user id
+GET http://localhost:3000/bancobrasil-boleto/cliente/1
+
+### Get all of one user id
+GET http://localhost:3000/bancobrasil-boleto/1
+
+### Put by id
+PATCH http://localhost:3000/bancobrasil-boleto/1
+Content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+### Delet by id
+DELETE  http://localhost:3000/bancobrasil-boleto/1
+
+
