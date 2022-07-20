@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
+    container_name: pagamento-app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+    depends_on:
+      - db
+      
+  db:
+    build: .docker/postgres
+    container_name: pagamento-db
+    restart: always
+    tty: true
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
+
+    
