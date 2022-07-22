@@ -1,0 +1,7 @@
+import{ Entity, Column} from 'typeorm';
+
+@Entity
+export class InstituitionModel{
+    @Column({length: 120})
+    nome: string;
+}

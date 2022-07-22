@@ -8,7 +8,13 @@ import { BancobrasilBoletosModule } from './bancobrasil-boletos/bancobrasil-bole
 import { BancobrasilBoletoRegistrosModule } from './bancobrasil-boleto-registros/bancobrasil-boleto-registros.module';
 
 @Module({
-  imports: [InstituitionsModule, MetodosModule, AccountsModule,BancobrasilBoletosModule, BancobrasilBoletoRegistrosModule],
+  imports: [
+    InstituitionsModule,
+    MetodosModule,
+    AccountsModule,
+    BancobrasilBoletosModule,
+    BancobrasilBoletoRegistrosModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
